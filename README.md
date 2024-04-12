@@ -1,2 +1,3 @@
-# proyecto1-web
-Proyecto 1: BlogDerek Arreaga 22537
+# Proyecto 1: Blog
+
+Derek Arreaga 22537
