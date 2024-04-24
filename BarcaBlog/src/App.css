@@ -26,6 +26,7 @@
             z-index: -1;
         }
         header{
+            padding: 0%;
             background-color: #0A0927;
             /*mas colores: https://teamcolorcodes.com/barcelona-fc-colors/
             */
@@ -49,6 +50,15 @@
             order: 1;
         }
 
+        .estadio{
+            display: flex;
+            align-items: center;
+        }
+
+        .estadioLogo {
+            margin-right: 5px;
+        }
+
         .detalles-partido {
             order:2;
         }
@@ -58,7 +68,7 @@
         }
 
         .LogoMarcador {
-            width: 9vw;
+            width: 5vw;
             height: auto;
             padding: 1vw;
         }

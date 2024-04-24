@@ -6,7 +6,7 @@ import './App.css'
 const Post = ({ post }) => {
         
   return(
-      <div class="container_posts">
+      <div class="container_posts">HOME
           <div class="post">
               <header class="header-container">
                   <div class="info-partido">
@@ -49,8 +49,8 @@ const Post = ({ post }) => {
 
 };
 
-const App = () => {
-  const [ posts, setPosts ] = React.useState([])
+const Home = () => {
+  const [ posts, setPosts ] = useState([])
 
   async function fetchPosts(){
       try {
@@ -93,7 +93,7 @@ const App = () => {
       }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
       fetchPosts()
   }, []);
 
@@ -111,4 +111,4 @@ const App = () => {
   );
 };
 
-export default App
+export default Home
