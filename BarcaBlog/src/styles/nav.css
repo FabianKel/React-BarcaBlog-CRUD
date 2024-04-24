@@ -1,0 +1,25 @@
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0927;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #EDBB00;
+    margin: 0 10px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-container a:hover {
+    color: #ebd06d;
+    font-size: 1.1em;
+}
+
+.nav-container a:last-child {
+    margin-right: 0;
+}

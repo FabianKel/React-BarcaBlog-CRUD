@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../App.css'
 
 
-const admin_menu = () => {
+function admin_menu() {
   
   return(
       <div>

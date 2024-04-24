@@ -5,6 +5,9 @@ import Nav from '@components/Nav'
 import Login from '@pages/Login';
 import Home from '@pages/Home';
 import admin_menu from '@pages/admin_menu';
+import ViewMatches from '@pages/matches';
+
+import '../index.css'
 
 const routes = {
 
@@ -18,6 +21,10 @@ const routes = {
     },
     '/admin': {
         component: admin_menu,
+        requiresAuth: false
+    },
+    '/matches': {
+        component: ViewMatches,
         requiresAuth: false
     }
 
