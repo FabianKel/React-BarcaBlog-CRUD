@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import logo1 from './assets/logo1.png'
-import estadioLogo from './assets/estadio.svg'
-import './App.css'
+import logo1 from '../assets/logo1.png'
+import estadioLogo from '../assets/estadio.svg'
+import '../App.css'
 
 const Post = ({ post }) => {
         
