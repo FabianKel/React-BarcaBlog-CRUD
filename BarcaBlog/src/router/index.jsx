@@ -1,8 +1,10 @@
 import useNavigate from '@hooks/useNavigate'
+import useToken from  '@hooks/useToken'
 
 import Nav from '@components/Nav'
 
 import Login from '@pages/Login';
+import Logout from '@pages/Logout';
 import Home from '@pages/Home';
 import admin_menu from '@pages/admin_menu';
 import ViewMatches from '@pages/matches';
@@ -21,6 +23,10 @@ const routes = {
     },
     '/admin': {
         component: admin_menu,
+        requiresAuth: true
+    },
+    'logout':{
+        component: Logout,
         requiresAuth: false
     },
     '/matches': {
@@ -31,12 +37,22 @@ const routes = {
 }
 
 function Router() {
+    const { token } = useToken()
     const { page } = useNavigate()
 
     let CurrentPage = () => <h1>404 Page not found</h1>
 
     if (routes[page]){
-        CurrentPage = routes[page].component
+        if (!token && routes[page].requiresAuth) {
+            CurrentPage = Login
+        } else {
+            CurrentPage = routes[page].component
+        }
+    }
+
+    if (page == "/logout"){
+        window.location.replace("/home")
+        localStorage.clear()
     }
 
     return (

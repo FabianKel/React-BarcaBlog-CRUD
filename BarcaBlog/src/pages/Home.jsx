@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import logo1 from '../assets/logo1.png'
 import estadioLogo from '../assets/estadio.svg'
-import '../App.css'
+import '../styles/home.css'
 
 const Post = ({ post }) => {
         
   return(
       <div class="container_posts">
           <div class="post">
-              <header class="header-container">
+              <div class="header-container">
                   <div class="info-partido">
                       {post.partidoInfo.fecha}
                       <br/>
@@ -30,7 +29,7 @@ const Post = ({ post }) => {
                           </tr>
                       </table>
                   </div>
-              </header>
+              </div>
 
               <hr/>
               <div class="tituloPost">
@@ -99,13 +98,7 @@ const Home = () => {
 
   return(
       <div>
-      <header>
-          <div class = "ImgBanner">
-          <center>
-          <img src={logo1} class="LogoHeader"></img>
-          </center>
-          </div>
-      </header>
+      
           {posts.map(post => <Post key={post.id} post={post} partidoInfo={post.partidoInfo} />)}
       </div>
   );

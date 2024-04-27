@@ -1,257 +1,191 @@
 
-        .pressed { background-color: lightgrey; }
 
-        @font-face {
-            font-family: 'BarcaFont1';
-            src: url('./assets/barcelona_font1.ttf') format('truetype'); 
-        }
+.pressed { background-color: lightgrey; }
 
-        body {
-            font-family: 'BarcaFont1', sans-serif; 
-            background-color: #181733;
-            margin: 0;
-            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.wired.co.uk%2Fphotos%2F606db98e73af541e62695c4e%2F16%3A9%2Fw_2560%252Cc_limit%2Fain7_20171213_fcb_vis_futur-camp-nou_campus_aerial_1_night.jpg&f=1&nofb=1&ipt=026dbdcb7a48aa0a6afcd41197b8f212fa1327979a37fe8deb17af892841f4bf&ipo=images");
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #181733;
-            opacity: 0.5;
-            z-index: -1;
-        }
-        header{
-            padding: 0%;
-            background-color: #0A0927;
-            /*mas colores: https://teamcolorcodes.com/barcelona-fc-colors/
-            */
-        }
+@font-face {
+    font-family: 'BarcaFont1';
+    src: url('./assets/barcelona_font1.ttf') format('truetype'); 
+}
 
-        .container_posts {
-            margin: auto;
-        }
-        .post {
-            background-color: #fff;
-        }
-        
-        .header-container{
-            background-color: #fff;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
+body {
+    font-family: 'BarcaFont1', sans-serif; 
+    background-color: #181733;
+    margin: 0;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.wired.co.uk%2Fphotos%2F606db98e73af541e62695c4e%2F16%3A9%2Fw_2560%252Cc_limit%2Fain7_20171213_fcb_vis_futur-camp-nou_campus_aerial_1_night.jpg&f=1&nofb=1&ipt=026dbdcb7a48aa0a6afcd41197b8f212fa1327979a37fe8deb17af892841f4bf&ipo=images");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #181733;
+    opacity: 0.5;
+    z-index: -1;
+}
+header{
+    padding: 0%;
+    background-color: #0A0927;
+    /*mas colores: https://teamcolorcodes.com/barcelona-fc-colors/
+    */
+}
 
-        .info-partido {
-            order: 1;
-        }
+.tituloPost{
+    flex: 3;
+}
+.imagenPartido {
+    width: 90%;
+}
+.ImgBanner{
+    text-align: center;
+}
 
-        .estadio{
-            display: flex;
-            align-items: center;
-        }
+/* Estilos para pantallas de 1280px a 1100px */
+@media screen and (min-width: 1100px) {
+    /* Header de Página */
+    header{
+        padding: 0.1vw;
+    }
+    .ImgBanner{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+}
 
-        .estadioLogo {
-            margin-right: -25px;
-        }
+/* Estilos para pantallas de 1100px a 1000px */
+@media screen and (max-width: 1100px) and (min-width: 1000px) {
+    /* Header de Página */
+    header{
+        padding: 0.5vw;
+    }
+    .ImgBanner{
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
 
-        .detalles-partido {
-            order:2;
-        }
+}
 
-        .marcador-partido, .nombres-equipos {
-            text-align: center;
-        }
+/* Estilos para pantallas de 1000px a 815px */
+@media screen and (max-width: 1000px) and (min-width: 815px) {
+/* Header de Página */
 
-        .LogoMarcador {
-            width: 5vw;
-            height: auto;
-            padding: 1vw;
-        }
-        .estadioLogo {
-            width: 5vw;
-            height: auto;
-            padding: 1vw;
-        }
+.ImgBanner{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    overflow:hidden;
+}
+.LogoHeader{
+    max-height: 100%;
+    width: auto;
+    display: inline-block;
+}
 
-        .nombres-equipos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+}
 
+/* Estilos para pantallas de 815px a 640px */
+@media screen and (max-width: 815px) and (min-width: 640px) {
+/* Header de Página */
+header{
+    padding: 0.5vw;
+}
+.ImgBanner{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
 
-        /*Tamaños*/
-        .container_posts {
-            width: 60vw;
-            padding: 30px;
-        }
-        .post {
-            border-radius: 8px;
-            margin-bottom: 20px;
-            padding: 30px;
-            border-radius: 20px;
-        }
-        /**/
+/* Cuerpo Post */
+}
 
+/* Estilos para pantallas de 640px o menos */
+@media screen and (max-width: 640px) {
+/* Header de Página */
+header{
+    padding: 0.5vw;
+}
+.ImgBanner{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.LogoHeader{
+    width: 100%;
+}
 
-        .tituloPost{
-            flex: 3;
-        }
-        .imagenPartido {
-            width: 90%;
-        }
-        .ImgBanner{
-            text-align: center;
-        }
+/* Cuerpo Post */
+}
+.pressed { background-color: lightgrey; }
 
-        /* Estilos para pantallas de 1280px a 1100px */
-        @media screen and (min-width: 1100px) {
-        /* Header de Página */
-        header{
-            padding: 0.1vw;
-        }
-        .ImgBanner{
-            width: 100%;
-            height: auto;
-            text-align: center;
-            overflow: hidden;
-        }
+@font-face {
+    font-family: 'BarcaFont1';
+    src: url('./assets/barcelona_font1.ttf') format('truetype'); 
+}
 
-        /* Post */
-        /* Header */
-        /* infoPartido */
-        /* MarcadorPartido */
+body {
+    font-family: 'BarcaFont1', sans-serif; 
+    background-color: #181733;
+    margin: 0;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.wired.co.uk%2Fphotos%2F606db98e73af541e62695c4e%2F16%3A9%2Fw_2560%252Cc_limit%2Fain7_20171213_fcb_vis_futur-camp-nou_campus_aerial_1_night.jpg&f=1&nofb=1&ipt=026dbdcb7a48aa0a6afcd41197b8f212fa1327979a37fe8deb17af892841f4bf&ipo=images");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #181733;
+    opacity: 0.5;
+    z-index: -1;
+}
+header{
+    padding: 0%;
+    background-color: #0A0927;
+    /*mas colores: https://teamcolorcodes.com/barcelona-fc-colors/
+    */
+}
 
-        /* Cuerpo Post */
-        }
+.fondoLogo{
+    padding: 0%;
+    background-color: #0A0927;
+    /*mas colores: https://teamcolorcodes.com/barcelona-fc-colors/
+    */
+}
 
-        /* Estilos para pantallas de 1100px a 1000px */
-        @media screen and (max-width: 1100px) and (min-width: 1000px) {
-            /* Header de Página */
-            header{
-                padding: 0.5vw;
-            }
-            .ImgBanner{
-                width: 100%;
-                text-align: center;
-                overflow: hidden;
-            }
+footer {
+    background-color: #0A0927;
+    color: #EDBB00;
+    text-align: center;
+    padding: 0.5vw;
+    /* Fijar el footer en la parte inferior de la ventana del navegador */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 
-            /* Post */
-            .container_posts {
-                width: 660px;
-            }
-            /* Header */
-            /* infoPartido */
-            /* MarcadorPartido */
+header {
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0px;
+    animation: adjust-header linear both;
+    animation-range: 0 100px;
+}
 
-            /* Cuerpo Post */
-        }
-
-        /* Estilos para pantallas de 1000px a 815px */
-        @media screen and (max-width: 1000px) and (min-width: 815px) {
-        /* Header de Página */
-
-        .ImgBanner{
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            text-align: center;
-            overflow:hidden;
-        }
-        .LogoHeader{
-            max-height: 100%;
-            width: auto;
-            display: inline-block;
-        }
-
-        /* Post */
-        .container_posts {
-                width: 660px;
-        }
-        /* Header */
-        /* infoPartido */
-        /* MarcadorPartido */
-
-        /* Cuerpo Post */
-        }
-
-        /* Estilos para pantallas de 815px a 640px */
-        @media screen and (max-width: 815px) and (min-width: 640px) {
-        /* Header de Página */
-        header{
-            padding: 0.5vw;
-        }
-        .ImgBanner{
-            width: 100%;
-            text-align: center;
-            overflow: hidden;
-        }
-        
-
-        /* Post */
-        .container_posts {
-            width: 660px;
-        }
-        /* Header */
-        .header-container {
-            flex-direction: column; /* Cambiar a una columna en pantallas más pequeñas */
-        }
-        .container_posts {
-            width: 100vw;
-        }
-        .info-partido,.detalles-partido {
-            width: 100%; /* Ambos ocupan el 100% del ancho */
-            order: unset; /* Restablecer el orden para la disposición de una columna */
-        }
-
-        .info-partido {
-            margin-bottom: 20px; /* Agregar espacio entre los elementos */
-        }
-        /* infoPartido */
-        /* MarcadorPartido */
-
-        /* Cuerpo Post */
-        }
-
-        /* Estilos para pantallas de 640px o menos */
-        @media screen and (max-width: 640px) {
-        /* Header de Página */
-        header{
-            padding: 0.5vw;
-        }
-        .ImgBanner{
-            width: 100%;
-            text-align: center;
-            overflow: hidden;
-        }
-        .LogoHeader{
-            width: 100%;
-        }
-
-        /* Post */
-        /* Header */
-        .header-container {
-            flex-direction: column; /* Cambiar a una columna en pantallas más pequeñas */
-        }
-        .container_posts {
-            width: 100vw;
-        }
-        .info-partido,.detalles-partido {
-            width: 100%; /* Ambos ocupan el 100% del ancho */
-            order: unset; /* Restablecer el orden para la disposición de una columna */
-        }
-
-        .info-partido {
-            margin-bottom: 20px; /* Agregar espacio entre los elementos */
-        }
-        /* infoPartido */
-        /* MarcadorPartido */
-
-        /* Cuerpo Post */
-        }
+@keyframes adjust-header {
+    to{
+        background: #0A0927;
+        height: 32px;
+        border-radius: 0;
+    }
+}
