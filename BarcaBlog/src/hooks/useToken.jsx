@@ -1,18 +1,6 @@
 import { useContext, createContext, useEffect, useState } from "react";
 
-function parseToken(token){
-    const base64Url = token.split('.')[1]
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/')
-    const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-    }).join(''))
-    
-    return JSON.parse(jsonPayload);
-}
-
-
-
-
+import { parseToken } from '../utils/auth.jsx';
 
 const TokenContext = createContext ({ token: '', useToken: () =>  {} })
 
@@ -32,9 +20,10 @@ const TokenProvider = ({children}) => {
 
 
     
-    const getRawToken = () => {
+    const getRawToken = (token) => {
         if (!token){
-            return parseToken(token)
+            const decodedToken = parseToken(token);
+            return decodedToken
         }
         
     }

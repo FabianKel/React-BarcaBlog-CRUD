@@ -5,11 +5,11 @@ import Nav from '@components/Nav'
 
 import Login from '@pages/Login';
 import Logout from '@pages/Logout';
+import User from '@pages/User';
 import Home from '@pages/Home';
 import admin_menu from '@pages/admin_menu';
 import ViewMatches from '@pages/matches';
 
-import '../index.css'
 
 const routes = {
 
@@ -25,8 +25,12 @@ const routes = {
         component: admin_menu,
         requiresAuth: true
     },
-    'logout':{
+    '/logout':{
         component: Logout,
+        requiresAuth: false
+    },
+    '/user':{
+        component: User,
         requiresAuth: false
     },
     '/matches': {

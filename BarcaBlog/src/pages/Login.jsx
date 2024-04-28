@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import CryptoJS from 'crypto-js'
 
+
+
 import useToken from '@hooks/useToken'
 import useNavigate from '@hooks/useNavigate'
 import '../styles/home.css'
@@ -28,8 +30,7 @@ function Login() {
 
         if (response.ok) {
             const  token  = await response.json()
-            
-            console.log('token: ', token)
+
             setToken(token.access_token)
             navigate('#/')
 
