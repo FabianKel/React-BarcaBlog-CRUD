@@ -2,26 +2,29 @@ import React, { useEffect, useState } from 'react';
 import estadioLogo from '../assets/estadio.svg'
 import '../styles/home.css'
 
+
+
+
 const Post = ({ post }) => {
         
   return(
-      <div class="container_posts">
-          <div class="post">
-              <div class="header-container">
-                  <div class="info-partido">
+      <div className="container_posts">
+          <div className="post">
+              <div className="header-container">
+                  <div className="info-partido">
                       {post.partidoInfo.fecha}
                       <br/>
-                      <div class="estadio">
-                        <img class="estadioLogo" src={estadioLogo}></img>
+                      <div className="estadio">
+                        <img className="estadioLogo" src={estadioLogo}></img>
                         {post.equipoLocal.NombreEstadio}
                       </div>
                   </div>
 
-                  <div class="detalles-partido">
+                  <div className="detalles-partido">
                       <table>
                           <tr>
-                              <td><img src={post.equipoLocal.logoIMG} alt="Logo Local" class="LogoMarcador"></img>{post.partidoInfo.marcador_local}</td>
-                              <td>{post.partidoInfo.marcador_visit} <img src={post.equipoVisitante.logoIMG} alt="Logo Visitante" class="LogoMarcador"></img></td>
+                              <td><img src={post.equipoLocal.logoIMG} alt="Logo Local" className="LogoMarcador"></img>{post.partidoInfo.marcador_local}</td>
+                              <td>{post.partidoInfo.marcador_visit} <img src={post.equipoVisitante.logoIMG} alt="Logo Visitante" className="LogoMarcador"></img></td>
                           </tr>
                           <tr>
                               <td>{post.equipoLocal.nombre} - </td>
@@ -32,31 +35,35 @@ const Post = ({ post }) => {
               </div>
 
               <hr/>
-              <div class="tituloPost">
+              <div className="tituloPost">
                       <h1>{post.title}</h1>
                   </div>
                   
               
               <h3>{post.content}</h3>
               <center>
-                  <img src={post.imagen_data1} alt= {post.title} class="imagenPartido"/>
+                  <img src={post.imagen_data1} alt= {post.title} className="imagenPartido"/>
               </center>
           </div>
-          <div class="overlay"></div>
+          <div className="overlay"></div>
       </div>
   );
 
 };
 
+
+const api_dir = import.meta.env.VITE_API_DIR
+
 const Home = () => {
-  const [ posts, setPosts ] = useState([])
+    const [ posts, setPosts ] = useState([])
+    
 
   async function fetchPosts(){
       try {
           // Realizar las solicitudes HTTP en paralelo
           const [listadoPosts, listadoPartidos] = await Promise.all([
-              fetch('http://localhost:3000/posts'),
-              fetch('http://localhost:3000/partidos')
+              fetch(api_dir+'/posts'),
+              fetch(api_dir+'/partidos')
           ]);
 
           // Convertir las respuestas a JSON
@@ -68,15 +75,15 @@ const Home = () => {
               const partidoInfo = Partidos_json.find(partido => partido.id === post.partido_id);
 
               // Obtener información del equipo local
-              const equipoLocalResponse = await fetch(`http://localhost:3000/equipos/${partidoInfo.local_id}`);
+              const equipoLocalResponse = await fetch(`${api_dir}/equipos/${partidoInfo.local_id}`);
               const equipoLocalData = await equipoLocalResponse.json();
 
               // Obtener información del equipo visitante
-              const equipoVisitanteResponse = await fetch(`http://localhost:3000/equipos/${partidoInfo.visit_id}`);
+              const equipoVisitanteResponse = await fetch(`${api_dir}/equipos/${partidoInfo.visit_id}`);
               const equipoVisitanteData = await equipoVisitanteResponse.json();
 
               // Obtener información de las acciones para este partido
-              /*const accionesResponse = await fetch(`http://localhost:3000/acciones/${partidoInfo.id}`);
+              /*const accionesResponse = await fetch(`${api_dir}/acciones/${partidoInfo.id}`);
               const accionesData = await accionesResponse.json();*/
 
               return { ...post, partidoInfo, equipoLocal: equipoLocalData, equipoVisitante: equipoVisitanteData};
