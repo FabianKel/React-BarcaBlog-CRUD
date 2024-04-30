@@ -10,6 +10,11 @@ import Home from '@pages/Home';
 import admin_menu from '@pages/admin_menu';
 import ViewMatches from '@pages/matches';
 
+//CRUD
+import createPost from '@pages/crud/createPost';
+import editPost from '@pages/crud/editPost';
+import deletePost from '@pages/crud/deletePost';
+
 
 const routes = {
 
@@ -36,6 +41,18 @@ const routes = {
     '/matches': {
         component: ViewMatches,
         requiresAuth: false
+    },
+    '/admin/createPost' : {
+        component: createPost,
+        requiresAuth: true
+    },
+    '/admin/deletePost' : {
+        component: deletePost,
+        requiresAuth: true
+    },
+    '/admin/editPost' : {
+        component: editPost,
+        requiresAuth: true
     }
 
 }

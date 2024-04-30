@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import estadioLogo from '../assets/estadio.svg'
 import '../styles/home.css'
+import useNavigate from "@hooks/useNavigate"
+
 
 
 
@@ -56,6 +58,8 @@ const api_dir = import.meta.env.VITE_API_DIR
 
 const Home = () => {
     const [ posts, setPosts ] = useState([])
+    const { navigate } = useNavigate();
+
     
 
   async function fetchPosts(){
@@ -96,6 +100,9 @@ const Home = () => {
           setPosts(combinedData);
       } catch (error) {
           console.error("Error fetching data:", error);
+          if(error = "Token de acceso vencido"){
+            navigate( "/login" );
+          }
       }
   }
 

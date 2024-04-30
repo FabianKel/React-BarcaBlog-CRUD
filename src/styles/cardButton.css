@@ -1,0 +1,30 @@
+.card {
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 5px solid #ccc;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+
+}
+
+.card:hover {
+    background-color: #e0e0e0;
+    border-color: #0A0927; 
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    grid-gap: 10px; 
+}
