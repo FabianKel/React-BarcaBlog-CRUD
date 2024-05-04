@@ -39,14 +39,14 @@ const Nav = () => {
             <center><img src={logo1} alt="Logo" className="logo" /></center>
 
             </a>
-            <a href="#/" onClick={() => navigate('/')}>Inicio</a> |
-            <a href="#/matches" onClick={() => navigate('/matches')}>Matches</a> |
+            <a href="#/" onClick={() => navigate('/')}>Inicio</a>
+            <a href="#/matches" onClick={() => navigate('/matches')}>Matches</a>
             {
                 isLoggedIn ? (
                     <>
-                    <a href="#/admin" onClick={() => navigate('/admin')}>Admin</a>|
-                    <a href="#/logout" onClick={() => navigate('/logout')}>Logout</a>|
-                    <a href="#/user" onClick={() => navigate('/user')}>Mi Cuenta</a>|
+                    <a href="#/admin" onClick={() => navigate('/admin')}>Admin</a>
+                    <a href="#/logout" onClick={() => navigate('/logout')}>Logout</a>
+                    <a href="#/user" onClick={() => navigate('/user')}>Mi Cuenta</a>
                     </>
                 ) : (
                     <a href="#/login" onClick={() => navigate('/login')}>Login</a>  
