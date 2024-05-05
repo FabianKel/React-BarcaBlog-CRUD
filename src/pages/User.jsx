@@ -17,7 +17,11 @@ function User() {
                     <div class="user-details">
                         <p><strong>Nombre:</strong>{decodedToken.username}</p>
                         <p><strong>Correo Electrónico:</strong>{decodedToken.email}</p>
-                        <p><strong>Fecha de Registro:</strong> 28 de abril de 2024</p>
+                        <p><strong>Fecha de Registro:</strong>
+                        {
+                            new Date(decodedToken.created_at).toLocaleDateString('es-GT')
+                        }
+                        </p>
                     </div>
                 </section>
             </main>
