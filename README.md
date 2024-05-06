@@ -21,7 +21,7 @@ El proyecto cuenta con las siguientes opciones:
 
 - **Visualización de Posts del Blog:** Permite visualizar posts del blog.
 - **Visualización de Resultados del FC Barcelona 23/24:** Muestra todos los resultados del FC Barcelona de la temporada 23/24, incluyendo goles a favor, goles en contra y minutos de los goles.
-- **CRUD de Posts:** Permite la creación, eliminación y edición de posts (solo de la tabla de posts).
+- **CRUD de Posts:** Permite la creación, eliminación y edición de posts.
 
 ## Autenticación JWT
 
