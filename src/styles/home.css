@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'BarcaFont1';
-    src: url('./assets/barcelona_font1.ttf') format('truetype'); 
+    src: url('@assets/barcelona_font1.ttf') format('truetype'); 
 }
 
 body {

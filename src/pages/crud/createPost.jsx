@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useNavigate from "@hooks/useNavigate";
+import '@styles/forms.css'
 
 
 const CreatePost = () => {

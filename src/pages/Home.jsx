@@ -9,7 +9,6 @@ import useApi from "@hooks/useApi"
 
 
 const Post = ({ post }) => {
-        console.log(post)
   return(
       <div className="container_posts">
           <div className="post">
@@ -25,6 +24,7 @@ const Post = ({ post }) => {
 
                   <div className="detalles-partido">
                       <table>
+                        <tbody>
                           <tr>
                               <td><img src={post.equipoLocal.logoIMG} alt="Logo Local" className="LogoMarcador"></img>{post.partidoInfo.marcador_local}</td>
                               <td>{post.partidoInfo.marcador_visit} <img src={post.equipoVisitante.logoIMG} alt="Logo Visitante" className="LogoMarcador"></img></td>
@@ -33,6 +33,7 @@ const Post = ({ post }) => {
                               <td>{post.equipoLocal.nombre} - </td>
                               <td> {post.equipoVisitante.nombre}</td>
                           </tr>
+                          </tbody>
                       </table>
                   </div>
               </div>

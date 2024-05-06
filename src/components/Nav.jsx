@@ -30,7 +30,6 @@ const Nav = () => {
     let decodedToken = {}
     if (isLoggedIn) {
         decodedToken = parseToken(token)
-        console.log(decodedToken)
     }
 
     return (
@@ -49,7 +48,10 @@ const Nav = () => {
                     <a href="#/user" onClick={() => navigate('/user')}>Mi Cuenta</a>
                     </>
                 ) : (
-                    <a href="#/login" onClick={() => navigate('/login')}>Login</a>  
+                    <>
+                    <a href="#/login" onClick={() => navigate('/login')}>Login</a>
+                    <a href="#/register" onClick={() => navigate('/register')}>Crear Cuenta</a>
+                    </>
                 )
             }
         </nav>

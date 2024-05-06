@@ -4,6 +4,7 @@ import useToken from  '@hooks/useToken'
 import Nav from '@components/Nav'
 
 import Login from '@pages/Login';
+import Register from '@pages/Register';
 import Logout from '@pages/Logout';
 import User from '@pages/User';
 import Home from '@pages/Home';
@@ -20,6 +21,10 @@ const routes = {
 
     '/': {
         component: Home,
+        requiresAuth: false
+    },
+    '/register': {
+        component: Register,
         requiresAuth: false
     },
     '/login': {

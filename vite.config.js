@@ -13,5 +13,8 @@ export default defineConfig({
       '@assets': '/src/assets',
       '@utils' : '/src/utils'
     }
+  }, 
+  server: {
+    port: 21334
   }
 })
