@@ -15,6 +15,32 @@ Este proyecto es una aplicación web desarrollada en React que consume una API s
 - **React:** Framework utilizado para el desarrollo de la aplicación.
 - **VITE:** Empaquetador utilizado para la construcción del proyecto.
 
+### Custom Hooks
+
+#### useApi
+
+Un hook para mejorar el manejo de fetching de data a la API.
+
+#### useNavigate
+
+Este hook se encarga de la navegación en la aplicación. Toma como parámetro una URL y actualiza la página actual.
+
+#### useToken
+
+Este hook gestiona el token de autenticación. Permite obtener, establecer y verificar el token de acceso.
+
+### Componentes
+
+El proyecto utiliza contextos y proveedores para manejar el estado de la aplicación.
+
+#### NavigationProvider
+
+Un proveedor de contexto que maneja la navegación en la aplicación. Utiliza el hook `useNavigate` para cambiar entre páginas.
+
+#### TokenProvider
+
+Un proveedor de contexto que gestiona el token de autenticación. Utiliza el hook `useToken` para obtener y establecer el token.
+
 ## Funcionalidades
 
 El proyecto cuenta con las siguientes opciones:
