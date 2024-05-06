@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import estadioLogo from '@assets/estadio.svg';
 import '@styles/home.css';
 import useNavigate from "@hooks/useNavigate";
+import '@styles/forms.css'
+
 
 const Post = ({ post, onDelete }) => {
   const handleDelete = () => {
@@ -46,7 +48,9 @@ const Post = ({ post, onDelete }) => {
         <center>
           <img src={post.imagen_data1} alt={post.title} className="imagenPartido" />
         </center>
-        <button onClick={handleDelete}>Eliminar</button>
+        <center>
+          <button className="deleteButton" onClick={handleDelete}>Eliminar Post</button>
+        </center> 
       </div>
       <div className="overlay"></div>
     </div>
@@ -97,6 +101,10 @@ const PostDelete = () => {
 
   const handleDeletePost = async (postId) => {
     const token = localStorage.getItem('access_token');
+    const confirmDelete = window.confirm('¿Estás seguro de que deseas eliminar este post?');
+    if (!confirmDelete) {
+      return;
+    }
 
     try {
       const response = await fetch(api_dir + '/posts/' + postId, {

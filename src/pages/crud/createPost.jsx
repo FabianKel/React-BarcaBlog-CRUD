@@ -65,13 +65,11 @@ const CreatePost = () => {
         navigate('/')
         window.location.replace('#/')
       } else {
-        // Manejar errores del servidor
         const errorMessage = await response.text();
         console.log(errorMessage)
         alert(`Error al enviar datos: ${errorMessage}`);
       }
     } catch (error) {
-      // Manejar otros errores
       console.error('Error al enviar datos:', error);
       alert('Error al enviar datos. Por favor, inténtalo de nuevo más tarde.');
     }
@@ -79,7 +77,7 @@ const CreatePost = () => {
   
 
   return (
-    <div className='createForm'>
+    <div className='form-createPost'>
       <h2>Formulario de Partidos</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div>
@@ -101,10 +99,12 @@ const CreatePost = () => {
         </div>
         <div>
           <label htmlFor="imagen_data1">URL de Imagen:</label>
-          <input id="imagen_data1" name="imagen_data1" value={imagenUrl} onChange={(e) => setImagenUrl(e.target.value)} />
+          <input id="imagen_data1" name="imagen_data1" type='url' value={imagenUrl} onChange={(e) => setImagenUrl(e.target.value)} />
         </div>
         <div>
-          <button type="submit">Enviar</button>
+          <center>
+            <button type="submit">Enviar</button>
+          </center>
         </div>
       </form>
     </div>

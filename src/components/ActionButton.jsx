@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import useAPI from './useAPI'; // Suponiendo que tienes un hook useAPI para llamar a la API
+import useAPI from './useAPI';
 
 function ComponenteConBoton() {
     const [mostrarLista, setMostrarLista] = useState(false);
     const [datos, setDatos] = useState([]);
-    const { fetchData } = useAPI(); // Suponiendo que useAPI devuelve una función fetchData
+    const { fetchData } = useAPI();
 
     const handleClick = async () => {
         try {
-            const response = await fetchData(); // Llamada a la API para obtener datos
-            setDatos(response.data); // Guardar los datos en el estado local
-            setMostrarLista(true); // Mostrar la lista después de recibir los datos
+            const response = await fetchData();
+            setDatos(response.data);
+            setMostrarLista(true);
         } catch (error) {
             console.error('Error al obtener los datos:', error);
         }
     };
 
     const handleContraer = () => {
-        setMostrarLista(false); // Ocultar la lista al hacer clic en el botón de contraer
+        setMostrarLista(false);
     };
 
     return (

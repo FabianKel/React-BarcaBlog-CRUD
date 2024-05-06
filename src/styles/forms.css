@@ -47,3 +47,84 @@
  {
     background-color: #cbcbcf;
 }
+
+/* CRUD POST*/
+
+.form-createPost,
+.form-editPost {
+    max-width: 35vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-createPost h2,
+  .form-editPost h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-createPost label,
+  .form-editPost label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-createPost select,
+  .form-createPost input[type="text"],
+  .form-createPost textarea,
+  .form-createPost input[type="url"],
+  .form-editPost select,
+  .form-editPost input[type="text"],
+  .form-editPost textarea,
+  .form-editPost input[type="url"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-createPost select,
+  .form-editPost select {
+    height: 40px;
+  }
+  
+  .form-createPost button[type="submit"] ,
+  .form-editPost button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 3%;
+  }
+  
+  .form-createPost button[type="submit"]:hover,
+  .form-editPost button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+.form-createPost textarea,
+.form-editPost textarea{
+    resize: none; 
+    font-family: system-ui;
+}
+
+
+.deleteButton{
+    color: white;
+    font-weight: bolder;
+    background-color: #F34642;
+    border-radius: 50px 50px;
+    padding: 15px 60px;
+    margin-top: 30px;
+    border: 0;
+}
+.deleteButton:hover{
+
+  background-color: #d5322f;
+}

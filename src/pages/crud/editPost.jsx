@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useNavigate from "@hooks/useNavigate";
+import '@styles/forms.css'
+
 
 const EditPost = () => {
   const [posts, setPosts] = useState([]);
@@ -71,7 +73,7 @@ const EditPost = () => {
   };
 
   return (
-    <div className='editForm'>
+    <div className='form-editPost'>
       <h2>Editar Post</h2>
       <div className="postSelector">
         <h3>Selecciona un post para editar:</h3>
