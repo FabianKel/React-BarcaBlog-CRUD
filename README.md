@@ -61,16 +61,25 @@ El proyecto incluye un sistema de autenticación con JWT con el siguiente flujo:
 Como instalar el proyecto en su ordenador:
 
 1. Clonar el repositorio:
-´´´ git clone https://github.com/FabianKel/proyecto1-web.git ´´´
+
+```http
+git clone https://github.com/FabianKel/proyecto1-web.git
+```
 
 3. Dirigirse al directorio del proyecto
+```http
 cd proyecto1-web
+```
 
-4. Instalar las dependencias:
-´´´npm install´´´
+5. Instalar las dependencias:
+```http
+npm install
+```
 
-5. Iniciar el entorno de desarrollo
-´´´npm run dev´´´
+7. Iniciar el entorno de desarrollo
+```http
+npm run dev
+```
 
 ## Inspiración
 
