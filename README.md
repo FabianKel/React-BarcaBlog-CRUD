@@ -72,7 +72,7 @@ cd proyecto1-web
 ```
 
 5. Instalar las dependencias:
-```http
+```
 npm install
 ```
 
