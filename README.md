@@ -62,12 +62,12 @@ Como instalar el proyecto en su ordenador:
 
 1. Clonar el repositorio:
 
-```http
+```
 git clone https://github.com/FabianKel/proyecto1-web.git
 ```
 
 3. Dirigirse al directorio del proyecto
-```http
+```
 cd proyecto1-web
 ```
 
@@ -77,7 +77,7 @@ npm install
 ```
 
 7. Iniciar el entorno de desarrollo
-```http
+```
 npm run dev
 ```
 
