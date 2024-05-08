@@ -20,7 +20,8 @@ function Login() {
 
 
     const ingresar = async () => {
-        const response = await fetch("http://localhost:3000/login", {
+        const api_dir = import.meta.env.VITE_API_DIR;
+        const response = await fetch(`${api_dir}/login`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
