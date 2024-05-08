@@ -57,6 +57,30 @@ El proyecto incluye un sistema de autenticación con JWT con el siguiente flujo:
 2. **Inicio de Sesión:** Los usuarios pueden iniciar sesión utilizando los datos de la cuenta creada. Las contraseñas se hashean durante el inicio de sesión.
 3. **Token JWT:** Al iniciar sesión, se genera un token JWT que expira después de 10 minutos. Después de expirar, el usuario debe iniciar sesión nuevamente para realizar acciones CRUD, excepto para ver la información.
 
+### Installation
+Como instalar el proyecto en su ordenador:
+
+1. Clonar el repositorio:
+
+```
+git clone https://github.com/FabianKel/proyecto1-web.git
+```
+
+3. Dirigirse al directorio del proyecto
+```
+cd proyecto1-web
+```
+
+5. Instalar las dependencias:
+```
+npm install
+```
+
+7. Iniciar el entorno de desarrollo
+```
+npm run dev
+```
+
 ## Inspiración
 
 Este proyecto está inspirado en el FC Barcelona, el mejor equipo del mundo. Independientemente de las circunstancias, seguiré apoyando al equipo. ¡Visca Barça!
