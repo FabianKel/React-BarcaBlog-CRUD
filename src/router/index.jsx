@@ -10,8 +10,9 @@ import User from '@pages/User';
 import Home from '@pages/Home';
 import admin_menu from '@pages/admin_menu';
 import ViewMatches from '@pages/matches';
+import Post from '@pages/Post';
 
-//CRUD
+//CRUD--
 import createPost from '@pages/crud/createPost';
 import editPost from '@pages/crud/editPost';
 import deletePost from '@pages/crud/deletePost';
@@ -58,6 +59,10 @@ const routes = {
     '/admin/editPost' : {
         component: editPost,
         requiresAuth: true
+    },
+    '/home/post/:postId' : {
+        component: Post,
+        requiresAuth: false
     }
 
 }
@@ -68,7 +73,10 @@ function Router() {
 
     let CurrentPage = () => <h1>404 Page not found</h1>
 
-    if (routes[page]){
+    if (page.startsWith('/home/post/')) {
+        const postId = page.split('/').pop();
+        CurrentPage = () => <Post postID={postId} />;
+    }else if (routes[page]){
         if (!token && routes[page].requiresAuth) {
             CurrentPage = Login
         } else {

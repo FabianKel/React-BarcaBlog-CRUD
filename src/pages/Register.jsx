@@ -44,7 +44,7 @@ function Register() {
 
     return (
         <div className='form-login'>
-            <h1>Registro</h1>
+            <h1>Crear Cuenta</h1>
             <p>
                 <input type="text" placeholder="Usuario" onChange={(e) => setUsername(e.target.value)} />
             </p>

@@ -74,7 +74,7 @@ function Login() {
             <p>
                 <button onClick={ingresar}>Ingresar</button>
             </p>
-            <a href="#/register" >¿No tienes cuenta? Crea una</a>
+            <a href="#/register" onClick={() => navigate('/register')} >¿No tienes cuenta? Crea una</a>
             <br/>
         </div>
     )

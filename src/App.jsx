@@ -27,7 +27,7 @@ function Header() {
   return(
     <footer className="footer">
         <center>
-            <p>FCBarcelona Blog | Derek Arreaga</p>
+            <p>FCBarcelona Blog | <a href='https://github.com/FabianKel/proyecto1-web/blob/main/README.md#proyecto-blog-crud' target='_blank'>Derek Arreaga</a></p>
         </center>
     </footer>
     )

@@ -6,11 +6,15 @@ import useApi from "@hooks/useApi"
 
 
 
-
-
 const Post = ({ post }) => {
-  return(
-      <div className="container_posts">
+    const { navigate } = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/home/post/${post.id}`);
+    };
+
+    return(
+      <div className="container_posts" >
           <div className="post">
               <div className="header-container">
                   <div className="info-partido">
@@ -47,9 +51,10 @@ const Post = ({ post }) => {
               <h3>{post.content}</h3>
               <center>
                   <img src={post.imagen_data1} alt= {post.title} className="imagenPartido"/>
-              </center>
+              </center><div className="overlay"></div>
+              
           </div>
-          <div className="overlay"></div>
+          
       </div>
   );
 
